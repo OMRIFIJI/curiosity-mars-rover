@@ -13,6 +13,47 @@
       <name>curiosity_path</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
+    
+    <include>
+      <uri>model://rock</uri>
+      <name>falling_rock1</name>
+      <pose>-2.155 -12.225 -8.820 0 0 0</pose>
+    </include>
 
+    <include>
+      <uri>model://rock</uri>
+      <name>falling_rock2</name>
+      <pose>10.9 -12.21 -9.79 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rock</uri>
+      <name>falling_rock3</name>
+      <pose>-1.48 1.93 -8.08 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rock</uri>
+      <name>falling_rock4</name>
+      <pose>1.00 -26.89 -10.67 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rock</uri>
+      <name>falling_rock5</name>
+      <pose>4.30 -37.48 -11.34 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://rock</uri>
+      <name>falling_rock6</name>
+      <pose>15.12 -34.82 -11.47 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rock</uri>
+      <name>falling_rock7</name>
+      <pose>15.12 -45.55 -12.53 0 0 0</pose>
+    </include>
   </world>
 </sdf>

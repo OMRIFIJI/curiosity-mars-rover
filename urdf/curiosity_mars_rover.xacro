@@ -21,9 +21,14 @@
     <!-- <xacro:include filename="$(find curiosity_mars_rover_description)/urdf/lidar.xacro" /> -->
     <!-- VLP-16 -->
     <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
-    <xacro:VLP-16 parent="chassis" name="velodyne" topic="/velodyne_points" organize_cloud="false" hz="10" samples="440" gpu="true">
+    <xacro:VLP-16 parent="chassis" name="velodyne" topic="/velodyne_points" organize_cloud="false" 
+        hz="7" 
+        samples="600" 
+        lasers="40" 
+        gpu="true"
+        noise="0">
         <!-- <origin xyz="0.380999 0.269555 0.6964681" rpy="0 0 0" /> -->
-        <origin xyz="0.380999 0.269555 1.7" rpy="0 0 0" />
+        <origin xyz="0.380999 0.269555 1.7" rpy="0 0 -1.57" />
     </xacro:VLP-16>
 
 	<xacro:chassis_body/>
