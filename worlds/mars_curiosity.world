@@ -23,19 +23,19 @@
     <include>
       <uri>model://rock</uri>
       <name>falling_rock2</name>
-      <pose>-25.717 -35.972 -10.564 0 0 0</pose>
+      <pose>-25.717 -30.815 -9.765 0 0 0</pose>
     </include>
 
     <include>
       <uri>model://rock</uri>
       <name>falling_rock3</name>
-      <pose>-62.056 -46.099 -10.256 0 0 0</pose>
+      <pose>-50.941 -24.810 -6.930 0 0 0</pose>
     </include>
 
     <include>
       <uri>model://rock</uri>
       <name>falling_rock4</name>
-      <pose>-53.538 -33.246 -8.731 0 0 0</pose>
+      <pose>-57.521 -12.014 -5.231 0 0 0</pose>
     </include>
 
   </world>
