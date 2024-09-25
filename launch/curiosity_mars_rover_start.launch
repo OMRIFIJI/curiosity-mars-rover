@@ -18,5 +18,5 @@
 
 	<include file="$(find curiosity_mars_rover_description)/launch/curiosity_mars_rover_control.launch"/>
 	<include file="$(find curiosity_mars_rover_description)/launch/curiosity_mars_rover_systems.launch"/>
-	<node name="rviz_main_rover" pkg="rviz" type="rviz" args="-d $(find curiosity_mars_rover_description)/rviz/curiosity_mars_rover.rviz" />
+    <!-- <node name="rviz_main_rover" pkg="rviz" type="rviz" args="-d $(find curiosity_mars_rover_description)/rviz/curiosity_mars_rover.rviz" /> -->
 </launch>
