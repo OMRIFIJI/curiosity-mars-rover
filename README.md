@@ -1,9 +1,11 @@
 # Curiosity rover and simple Mars world
 
 ## Overview
-This is my fork of rover from 
+This is my fork of curiosity mars rover ROSject from 
 [this repository](https://bitbucket.org/theconstructcore/curiosity_mars_rover/src/master/curiosity_mars_rover_description/).
-I've moved it to ROS noetic, attached lidar to the rover and added several rocks on Mars terrain. 
+This package contains urdf model of NASA's Curiosity rover and a simple Mars world with rocks.
+I've moved this package to ROS noetic, attached lidar to the rover and added several rocks on Mars terrain.
+Be aware that lidar is located at an awkward spot. You probably want to change its location in *xacro* file.
 ![Preview iamge](preview.jpg)
 
 ## Dependencies
@@ -24,4 +26,4 @@ for lidar simulation.
 ## Licensing
 Original project didn't have license in it, but it was
 [mentioned](https://discourse.ros.org/t/the-nasa-curiosity-rover-rosject-is-now-open-source/7635) that it's free to use and modify.
-If you are from Construct and want this repository to be removed contact me via mail please.
+If you are from Construct and want this repository to be removed contact me via email please.
