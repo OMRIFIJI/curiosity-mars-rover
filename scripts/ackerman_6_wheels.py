@@ -7,7 +7,7 @@ from geometry_msgs.msg import Twist
 
 class CuriosityMarsRoverAckerMan(object):
     def __init__(self):
-    	
+
         rospy.loginfo("CuriosityRoverAckerMan Initialising...")
 
         # TODO: Ackerman stuff
@@ -15,27 +15,26 @@ class CuriosityMarsRoverAckerMan(object):
         self.distance_front_center = 0.5
         self.distance_back_center = 0.5
 
-
         self.publishers_curiosity_d = {}
         self.controller_ns = "curiosity_mars_rover"
         self.controller_command = "command"
-        self.controllers_list = [   "back_wheel_L_joint_velocity_controller",
-                                    "back_wheel_R_joint_velocity_controller",
-                                    "front_wheel_L_joint_velocity_controller",
-                                    "front_wheel_R_joint_velocity_controller",
-                                    "middle_wheel_L_joint_velocity_controller",
-                                    "middle_wheel_R_joint_velocity_controller",
-                                    "suspension_arm_B2_L_joint_position_controller",
-                                    "suspension_arm_B2_R_joint_position_controller",
-                                    "suspension_arm_B_L_joint_position_controller",
-                                    "suspension_arm_B_R_joint_position_controller",
-                                    "suspension_arm_F_L_joint_position_controller",
-                                    "suspension_arm_F_R_joint_position_controller",
-                                    "suspension_steer_B_L_joint_position_controller",
-                                    "suspension_steer_B_R_joint_position_controller",
-                                    "suspension_steer_F_L_joint_position_controller",
-                                    "suspension_steer_F_R_joint_position_controller"
-                                ]
+        self.controllers_list = ["back_wheel_L_joint_velocity_controller",
+                                 "back_wheel_R_joint_velocity_controller",
+                                 "front_wheel_L_joint_velocity_controller",
+                                 "front_wheel_R_joint_velocity_controller",
+                                 "middle_wheel_L_joint_velocity_controller",
+                                 "middle_wheel_R_joint_velocity_controller",
+                                 "suspension_arm_B2_L_joint_position_controller",
+                                 "suspension_arm_B2_R_joint_position_controller",
+                                 "suspension_arm_B_L_joint_position_controller",
+                                 "suspension_arm_B_R_joint_position_controller",
+                                 "suspension_arm_F_L_joint_position_controller",
+                                 "suspension_arm_F_R_joint_position_controller",
+                                 "suspension_steer_B_L_joint_position_controller",
+                                 "suspension_steer_B_R_joint_position_controller",
+                                 "suspension_steer_F_L_joint_position_controller",
+                                 "suspension_steer_F_R_joint_position_controller"
+                                 ]
 
         for controller_name in self.controllers_list:
             topic_name = "/"+self.controller_ns+"/"+controller_name+"/"+self.controller_command
@@ -114,8 +113,6 @@ class CuriosityMarsRoverAckerMan(object):
         self.suspension_steer_B_R_pos_msg = Float64()
         self.suspension_steer_F_L_pos_msg = Float64()
         self.suspension_steer_F_R_pos_msg = Float64()
-
-
 
     def init_state(self):
         self.set_suspension_mode("standard")
@@ -208,7 +205,6 @@ class CuriosityMarsRoverAckerMan(object):
         self.set_wheels_speed(0.0)
         self.set_turning_radius(None)
 
-
     def move_with_cmd_vel(self):
         wheel_speed = self.cmd_vel_msg.linear.x
         turning_radius = self.cmd_vel_msg.angular.z
@@ -220,7 +216,6 @@ class CuriosityMarsRoverAckerMan(object):
         self.set_wheels_speed(wheel_speed)
 
 
-
 if __name__ == "__main__":
     rospy.init_node("CuriosityRoverAckerMan_node", log_level=rospy.INFO)
     curiosity_mars_rover_ackerman_object = CuriosityMarsRoverAckerMan()
@@ -228,5 +223,3 @@ if __name__ == "__main__":
     while not rospy.is_shutdown():
         curiosity_mars_rover_ackerman_object.move_with_cmd_vel()
         rate.sleep()
-
-
