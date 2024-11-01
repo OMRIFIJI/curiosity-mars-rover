@@ -4,7 +4,7 @@
 This is my fork of rover from 
 [this repository](https://bitbucket.org/theconstructcore/curiosity_mars_rover/src/master/curiosity_mars_rover_description/).
 I've moved it to ROS noetic, attached lidar to the rover and added several rocks on Mars terrain. 
-
+![Preview iamge](preview.jpg)
 
 ## Dependencies
 1. Relies on [velodyne_simulator](https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master) 
